@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+  main
+    div.img-hold
+    div.content-hold
+      form(name="myform" action="" method="POST")
+        img(src="/images/7552570584197185327tractionlogo.jpeg" alt="Logo" width="80px")
+        h2 Reset Password
+        label(for="oldPassword") Current Password
+        input#oldPassword(type="password" name="oldPassword" required='true' placeholder="Your Current Password" value=(undefined===password ? '' : password.oldPassword))
+        label(for="password") PASSWORD
+        input#password(type="password" name="password" placeholder="8+ characters" required='true' value=(undefined===password ? '' : password.password))
+        label(for="confirmPassword") CONFIRM PASSWORD
+        input#confirmPassword(type="password" name="confirmPassword" required='true' placeholder="8+ characters" value=(undefined===password ? '' : password.confirmPassword))
+
+        button#mybtn(type="submit") Reset Password
+        script(src='/javascripts/main.js')
+
+      if errors
+        ul
+          for error in errors
+            li!= error.msg

@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/v1/auth/reset', catalogRouter);  // Add catalog routes to middleware chain.
+app.use('/v1/auth/reset/61d28e6gab13460003afa6282', catalogRouter);  // Add catalog routes to middleware chain.
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

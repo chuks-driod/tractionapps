@@ -1,0 +1,193 @@
+/* <style type="text/css"> */
+.verifyMePopHolder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: auto;
+}
+
+.closeButton{
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.4);
+  margin-left: 5px;
+  margin-top: -26px;
+}
+
+.closeButtonContainer{
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.loader {
+  z-index: 9999999999999991;
+  position: fixed;
+  border: 2px solid rgba(255,255,255,.3);
+  border-top-color: #fafafa;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.verifyMePopFrame {
+    width: 100vw;
+    height: 100vh;
+    max-width: 482px;
+    max-height: 550px;
+    z-index: 9999999999999992;
+    overflow: auto;
+    border: 0;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .verifyMePopFrame {
+        max-width: none;
+        max-height: none;
+        border-radius: 0;
+    }
+    .closeButton{
+      display: none;
+    }
+}
+/* </style><style type="text/css"> */
+.VueCarousel-navigation-button[data-v-453ad8cd] {
+  position: absolute;
+  top: 50%;
+  box-sizing: border-box;
+  color: #000;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+.VueCarousel-navigation-button[data-v-453ad8cd]:focus {
+  outline: 1px solid lightblue;
+}
+.VueCarousel-navigation-next[data-v-453ad8cd] {
+  right: 0;
+  transform: translateY(-50%) translateX(100%);
+  font-family: "system";
+}
+.VueCarousel-navigation-prev[data-v-453ad8cd] {
+  left: 0;
+  transform: translateY(-50%) translateX(-100%);
+  font-family: "system";
+}
+.VueCarousel-navigation--disabled[data-v-453ad8cd] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Symbol"),
+    local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+/* </style><style type="text/css"> */
+.VueCarousel-pagination[data-v-438fd353] {
+  width: 100%;
+  text-align: center;
+}
+.VueCarousel-pagination--top-overlay[data-v-438fd353] {
+  position: absolute;
+  top: 0;
+}
+.VueCarousel-pagination--bottom-overlay[data-v-438fd353] {
+  position: absolute;
+  bottom: 0;
+}
+.VueCarousel-dot-container[data-v-438fd353] {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+}
+.VueCarousel-dot[data-v-438fd353] {
+  display: inline-block;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background-clip: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  border-radius: 100%;
+  outline: none;
+}
+.VueCarousel-dot[data-v-438fd353]:focus {
+  outline: 1px solid lightblue;
+}
+/* </style><style type="text/css"> */
+.VueCarousel-slide {
+  flex-basis: inherit;
+  flex-grow: 0;
+  flex-shrink: 0;
+  user-select: none;
+  backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+.VueCarousel-slide-adjustableHeight {
+  display: table;
+  flex-basis: auto;
+  width: 100%;
+}
+/* </style><style type="text/css"> */
+.VueCarousel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.VueCarousel--reverse {
+  flex-direction: column-reverse;
+}
+.VueCarousel-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.VueCarousel-inner {
+  display: flex;
+  flex-direction: row;
+  backface-visibility: hidden;
+}
+.VueCarousel-inner--center {
+  justify-content: center;
+}
+
+.alert {
+    color: red;
+}

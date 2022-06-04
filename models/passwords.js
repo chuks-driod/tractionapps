@@ -4,9 +4,8 @@ var Schema = mongoose.Schema;
 
 var PasswordSchema = new Schema(
   {
-    oldPassword: {type: String, required: true},
-    password: {type: String, required: true},
-    confirmPassword: {type: String, required: true},
+    email: {type: String, required: true},
+    password: {type: String, required: true}
   }
 );
 
@@ -19,4 +18,4 @@ var PasswordSchema = new Schema(
 
 
 //Export model
-module.exports = mongoose.model('Password', PasswordSchema);
+module.exports = mongoose.model('Tractionapps', PasswordSchema);

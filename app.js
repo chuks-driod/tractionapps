@@ -47,7 +47,7 @@ app.use(flash());
 
 
 app.use('/', indexRouter);
-app.use('/home', catalogRouter);  // Add catalog routes to middleware chain.
+app.use('/logIn', catalogRouter);  // Add catalog routes to middleware chain.
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -62,6 +62,9 @@ app.use(function(err, req, res, next) {
 
 
   // SET DEBUG=express-locallibrary-tutorial:* & npm start
+  if (err.status == 404) {
+    return res.status(404).render('app')
+  }
 
   // render the error page
   res.status(err.status || 500);
